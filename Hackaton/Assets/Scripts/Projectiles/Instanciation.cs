@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Instanciation : MonoBehaviour {
 
-	int speed = 50;
+	int speed = 30;
 	private float delay = 0.5f;
 	private float timeCurrent = 0.0f;
 
@@ -26,12 +26,14 @@ public class Instanciation : MonoBehaviour {
 			//Position du FP
 			var playerPos = player.position;
 
-			//Position somewhere in a cube -10.0 and 10.0
-			Vector3 pos = playerPos +  new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f));
+			//Position somewhere au dessus du terrain in a cube -10.0 and 10.0
+			Vector3 pos = new Vector3(Random.Range(-58.0f, -13.0f), Random.Range(0.0f, 20.0f), Random.Range(-33.0f, 13.0f));
 			instance = Instantiate((GameObject.Find("Projectile")).GetComponent<Rigidbody>(), pos, Random.rotation) as Rigidbody;
 
-			//Application d'une force au projectile
-			instance.AddForce(instance.transform.forward * speed);
+			//Application d'une force au projectile instance
+			//Vecteur force en direction d'une zone autour du player
+			Vector3 dir = playerPos - instance.transform.position + new Vector3(Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f));;
+			instance.AddForce(dir * speed);
 
 			timeCurrent = Time.fixedTime;
 
