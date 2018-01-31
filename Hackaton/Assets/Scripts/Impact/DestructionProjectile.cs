@@ -17,7 +17,7 @@ public class DestructionProjectile : MonoBehaviour {
 
 			Instantiate (destroyedVersion, col.gameObject.transform.position, col.gameObject.transform.rotation);
 			Destroy (col.gameObject);
-			SteamVR_Controller.Input (3).TriggerHapticPulse ();
+			SteamVR_Controller.Input (3).TriggerHapticPulse (10000);
 		}
 	}
 }
