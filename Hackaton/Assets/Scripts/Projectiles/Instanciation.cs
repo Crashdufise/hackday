@@ -10,9 +10,8 @@ public class Instanciation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Rigidbody rb = GetComponent<Rigidbody>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -28,6 +27,7 @@ public class Instanciation : MonoBehaviour {
 
 			//Position somewhere in a cube -10.0 and 10.0
 			Vector3 pos = playerPos +  new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f));
+			instance = Instantiate((GameObject.Find("Projectile")).GetComponent<Rigidbody>(), pos, Random.rotation) as Rigidbody;
 
 			//Application d'une force au projectile
 			instance.AddForce(instance.transform.forward * speed);
