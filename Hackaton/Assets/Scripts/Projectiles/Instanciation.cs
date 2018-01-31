@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Instanciation : MonoBehaviour {
 
-	int speed = 30;
-	private float delay = 0.5f;
+	[Range (1, 50)]
+	public int speed = 25;
+	[Range (0.2f, 2.0f)]
+	public float delay = 1.0f;
 	private float timeCurrent = 0.0f;
 
 	public Transform player;
