@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4278201808505356}
   - component: {fileID: 54034759492445494}
+  - component: {fileID: 136293756331353748}
+  - component: {fileID: 114152105706517244}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -115,6 +117,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114152105706517244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1169871736836514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6071ab0c3b9a84dd0abc06bc021ffb7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedVersion: {fileID: 1745200847422962, guid: 91e5d8800b67a4e9c9a321d49aa23ace,
+    type: 2}
 --- !u!120 &120392542042050662
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -129,7 +144,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: d00096b7161494d0b82a4600c4cac73f, type: 2}
+  - {fileID: 2100000, guid: 1e245d4d45c5d2d4f8d3c133ab29fe7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,7 +232,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: d00096b7161494d0b82a4600c4cac73f, type: 2}
+  - {fileID: 2100000, guid: 1e245d4d45c5d2d4f8d3c133ab29fe7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -291,3 +306,16 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!136 &136293756331353748
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1169871736836514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

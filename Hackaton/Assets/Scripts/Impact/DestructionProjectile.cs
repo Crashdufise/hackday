@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Impact : MonoBehaviour {
+public class DestructionProjectile : MonoBehaviour {
 	
 	public GameObject destroyedVersion;
 
@@ -17,6 +17,7 @@ public class Impact : MonoBehaviour {
 
 			Instantiate (destroyedVersion, col.gameObject.transform.position, col.gameObject.transform.rotation);
 			Destroy (col.gameObject);
+			SteamVR_Controller.Input (3).TriggerHapticPulse ();
 		}
 	}
 }

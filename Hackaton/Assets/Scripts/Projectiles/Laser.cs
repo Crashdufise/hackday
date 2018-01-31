@@ -7,7 +7,7 @@ public class Laser: MonoBehaviour
     public GameObject Player;
     public int speed = 200;
     public GameObject Las;
-    private float timeCurrent = 0.0f;
+	public Valve.VR.InteractionSystem.Hand hand;
 
     // Use this for initialization
     void Start()
@@ -19,9 +19,9 @@ public class Laser: MonoBehaviour
     void Update()
     {
         Camera cam = Player.GetComponent<Camera>();
-        if(Input.GetKeyDown(KeyCode.Space)) {
+		if(hand.GetStandardInteractionButtonDown()) {
             Rigidbody instance;
-            instance = Instantiate(Las.GetComponent<Rigidbody>(), cam.transform.position, Quaternion.identity) as Rigidbody;
+			instance = Instantiate(Las.GetComponent<Rigidbody>(), cam.transform.position, cam.transform.rotation) as Rigidbody;
             instance.AddForce(cam.transform.forward * speed);
         }
 
