@@ -17,8 +17,8 @@ public class Instanciation : MonoBehaviour {
 	void Update () {
 
 		//S'execute tous les delay
-		//if (timeCurrent+delay < Time.fixedTime)
-		//{
+		if (timeCurrent+delay < Time.fixedTime)
+		{
 			//Instanciation d'un projectile
 			Rigidbody instance;
 
@@ -28,13 +28,12 @@ public class Instanciation : MonoBehaviour {
 
 			//Position somewhere in a cube -10.0 and 10.0
 			Vector3 pos = playerPos +  new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f));
-			instance = Instantiate(rb, pos, Random.rotation)  as Rigidbody;
 
 			//Application d'une force au projectile
-			//instance.AddForce(instance.transform.forward * speed);
+			instance.AddForce(instance.transform.forward * speed);
 
 			timeCurrent = Time.fixedTime;
-		
-		//}
+
+		}
 	}
 }
