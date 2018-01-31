@@ -13,9 +13,8 @@ public class ImpactSurLePlayer : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 
 		//Si cet object est le player
-		if (col.gameObject.name == "HeadCollider") {
+		if (col.gameObject.name == "HeadCollider" || col.gameObject.name == "BodyCollider") {
 			GetComponentInChildren<AudioSource>().Play();
-			Debug.Log ("Impact");
-		}
+		}	
 	}
 }
