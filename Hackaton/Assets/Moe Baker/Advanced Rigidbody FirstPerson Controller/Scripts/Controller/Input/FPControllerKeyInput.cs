@@ -25,15 +25,15 @@ namespace ARFC
     {
         [Header("Keys")]
         [SerializeField]
-        RawkeyCodeAxis walkAxis = new RawkeyCodeAxis(KeyCode.W, KeyCode.S);
+        RawkeyCodeAxis walkAxis = new RawkeyCodeAxis(KeyCode.Z, KeyCode.S);
         public RawkeyCodeAxis WalkAxis { get { return walkAxis; } }
 
         [SerializeField]
-        RawkeyCodeAxis strafeAxis = new RawkeyCodeAxis(KeyCode.D, KeyCode.A);
+        RawkeyCodeAxis strafeAxis = new RawkeyCodeAxis(KeyCode.D, KeyCode.Q);
         public RawkeyCodeAxis StrafeAxis { get { return strafeAxis; } }
 
         [SerializeField]
-        RawkeyCodeAxis leanAxis = new RawkeyCodeAxis(KeyCode.E, KeyCode.Q);
+        RawkeyCodeAxis leanAxis = new RawkeyCodeAxis(KeyCode.E, KeyCode.A);
         public RawkeyCodeAxis LeanAxis { get { return leanAxis; } }
 
         [SerializeField]

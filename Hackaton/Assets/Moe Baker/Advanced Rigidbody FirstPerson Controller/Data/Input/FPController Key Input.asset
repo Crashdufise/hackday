@@ -14,10 +14,10 @@ MonoBehaviour:
   movement: {x: 0, y: 0}
   look: {x: 0, y: 0}
   lean: 0
-  jump: 0
-  sprint: 0
-  crouch: 0
-  prone: 0
+  jump: 1
+  sprint: 1
+  crouch: 1
+  prone: 1
   walkAxis:
     positive: 122
     negative: 115
@@ -28,7 +28,7 @@ MonoBehaviour:
     value: 0
   leanAxis:
     positive: 101
-    negative: 113
+    negative: 97
     value: 0
   jumpKey: 32
   sprintKey: 304
